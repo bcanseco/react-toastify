@@ -253,7 +253,8 @@ class Toast extends Component {
       progressStyle,
       updateId,
       role,
-      rtl
+      rtl,
+      draggable
     } = this.props;
 
     const toastProps = {
@@ -289,7 +290,7 @@ class Toast extends Component {
         <div
           {...toastProps}
           ref={ref => (this.ref = ref)}
-          onMouseDown={this.onDragStart}
+          {...(draggable && {onMouseDown: this.onDragStart})}
           onTouchStart={this.onDragStart}
           onTransitionEnd={this.onDragTransitionEnd}
         >
