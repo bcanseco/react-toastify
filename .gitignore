@@ -1,6 +1,6 @@
 .idea/
 node_modules/
-lib/
+# lib/
 .sass-cache/
 npm-debug.log
 coverage/
